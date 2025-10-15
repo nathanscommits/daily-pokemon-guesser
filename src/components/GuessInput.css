@@ -1,0 +1,100 @@
+.guess-input-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.guess-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  background-color: #1a1a1b;
+  border: 2px solid #3a3a3c;
+  border-radius: 8px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.guess-input:focus {
+  border-color: #538d4e;
+}
+
+.guess-input::placeholder {
+  color: #818384;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1b;
+  border: 2px solid #3a3a3c;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown-item:hover {
+  background-color: #2a2a2b;
+}
+
+.pokemon-sprite-thumb {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+.pokemon-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.pokemon-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.pokemon-info {
+  font-size: 0.85rem;
+  color: #818384;
+}
+
+.dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background: #1a1a1b;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background: #3a3a3c;
+  border-radius: 4px;
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4c;
+}
+
