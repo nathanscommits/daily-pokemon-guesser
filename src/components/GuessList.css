@@ -1,0 +1,38 @@
+.guesses-list {
+  width: 100%;
+}
+
+.guesses-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #818384;
+  font-size: 1.1rem;
+}
+
+.guesses-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1.5fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.header-cell {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #818384;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .guesses-header {
+    grid-template-columns: 0.8fr 1.5fr 1.5fr 0.8fr 1fr 0.8fr;
+    gap: 4px;
+    font-size: 0.75rem;
+  }
+
+  .header-cell {
+    font-size: 0.75rem;
+  }
+}
+

@@ -1,0 +1,94 @@
+.guess-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1.5fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.attribute-cell {
+  background-color: #3a3a3c;
+  padding: 16px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.attribute-cell.pokemon-sprite {
+  background-color: #1a1a1b;
+  border: 2px solid #3a3a3c;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-sprite-medium {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+}
+
+.attribute-cell.pokemon-name {
+  background-color: #1a1a1b;
+  border: 2px solid #3a3a3c;
+  justify-content: flex-start;
+  padding-left: 16px;
+  font-size: 1.05rem;
+}
+
+.attribute-cell.match {
+  background-color: #538d4e;
+  color: white;
+}
+
+.attribute-cell.partial {
+  background-color: #b59f3b;
+  color: white;
+}
+
+.attribute-cell.no-match {
+  background-color: #3a3a3c;
+  color: #d7dadc;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .guess-row {
+    grid-template-columns: 0.8fr 1.5fr 1.5fr 0.8fr 1fr 0.8fr;
+    gap: 4px;
+  }
+
+  .attribute-cell {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+    min-height: 50px;
+  }
+
+  .pokemon-sprite-medium {
+    width: 32px;
+    height: 32px;
+  }
+
+  .attribute-cell.pokemon-name {
+    font-size: 0.85rem;
+    padding-left: 12px;
+  }
+}
+

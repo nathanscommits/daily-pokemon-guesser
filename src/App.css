@@ -1,0 +1,129 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rules {
+  background-color: #1a1a1b;
+  border: 1px solid #3a3a3c;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.rules h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.rules p {
+  margin-bottom: 10px;
+  color: #d7dadc;
+}
+
+.rules ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.rules li {
+  margin: 8px 0;
+  color: #d7dadc;
+}
+
+.rules .match {
+  display: inline-block;
+  background-color: #538d4e;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.rules .partial {
+  display: inline-block;
+  background-color: #b59f3b;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.rules .no-match {
+  display: inline-block;
+  background-color: #3a3a3c;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hint-section {
+  background-color: #1a1a1b;
+  border: 2px solid #b59f3b;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  animation: slideDown 0.3s ease-out;
+}
+
+.hint-section h3 {
+  color: #b59f3b;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hint-description {
+  font-style: italic;
+  color: #d7dadc;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+}
+
+.hide-hint-button {
+  background-color: #3a3a3c;
+  color: #d7dadc;
+  border: 1px solid #3a3a3c;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hide-hint-button:hover {
+  background-color: #4a4a4c;
+  border-color: #4a4a4c;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+}
+
