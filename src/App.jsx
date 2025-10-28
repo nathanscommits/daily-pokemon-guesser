@@ -12,18 +12,90 @@ function App() {
   const [gameStatus, setGameStatus] = useState('playing') // 'playing', 'won', 'lost'
   const [showRules, setShowRules] = useState(false)
   const [showHint, setShowHint] = useState(false)
+  const [dailyDate, setDailyDate] = useState(null)
+  const [timeUntilReset, setTimeUntilReset] = useState(null)
 
-  // Initialize game with random Pokemon
+  // Get daily Pokemon based on date
+  const getDailyPokemon = () => {
+    const today = new Date()
+    const dateString = today.toISOString().split('T')[0] // YYYY-MM-DD format
+    
+    // Use date as seed for consistent daily Pokemon
+    const seed = dateString.split('-').join('')
+    const pokemonIndex = parseInt(seed) % pokemonData.length
+    
+    return {
+      pokemon: pokemonData[pokemonIndex],
+      date: dateString
+    }
+  }
+
+  // Calculate time until next reset (midnight UTC)
+  const getTimeUntilReset = () => {
+    const now = new Date()
+    const tomorrow = new Date(now)
+    tomorrow.setUTCDate(tomorrow.getUTCDate() + 1)
+    tomorrow.setUTCHours(0, 0, 0, 0)
+    
+    const diff = tomorrow.getTime() - now.getTime()
+    const hours = Math.floor(diff / (1000 * 60 * 60))
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+    
+    return { hours, minutes }
+  }
+
+  // Initialize daily game
   useEffect(() => {
-    startNewGame()
+    initializeDailyGame()
+    
+    // Update timer every minute
+    const timer = setInterval(() => {
+      setTimeUntilReset(getTimeUntilReset())
+    }, 60000)
+    
+    return () => clearInterval(timer)
   }, [])
 
-  const startNewGame = () => {
-    const randomPokemon = pokemonData[Math.floor(Math.random() * pokemonData.length)]
-    setTargetPokemon(randomPokemon)
+  const initializeDailyGame = () => {
+    const dailyData = getDailyPokemon()
+    const savedData = localStorage.getItem('pokemonGuesserDaily')
+    
+    if (savedData) {
+      const parsed = JSON.parse(savedData)
+      
+      // Check if it's a new day
+      if (parsed.date === dailyData.date) {
+        // Same day - restore saved progress
+        setTargetPokemon(parsed.targetPokemon)
+        setGuesses(parsed.guesses || [])
+        setGameStatus(parsed.gameStatus || 'playing')
+        setDailyDate(parsed.date)
+      } else {
+        // New day - start fresh
+        startNewDailyGame(dailyData)
+      }
+    } else {
+      // First time - start fresh
+      startNewDailyGame(dailyData)
+    }
+    
+    setTimeUntilReset(getTimeUntilReset())
+  }
+
+  const startNewDailyGame = (dailyData) => {
+    setTargetPokemon(dailyData.pokemon)
     setGuesses([])
     setGameStatus('playing')
     setShowHint(false)
+    setDailyDate(dailyData.date)
+    
+    // Save to localStorage
+    localStorage.setItem('pokemonGuesserDaily', JSON.stringify({
+      date: dailyData.date,
+      targetPokemon: dailyData.pokemon,
+      guesses: [],
+      gameStatus: 'playing'
+    }))
   }
 
   const handleGuess = (pokemon) => {
@@ -38,12 +110,20 @@ function App() {
     
     setGuesses(newGuesses)
 
+    let newGameStatus = gameStatus
     // Check if won
     if (pokemon.id === targetPokemon.id) {
+      newGameStatus = 'won'
       setGameStatus('won')
-    } else if (newGuesses.length >= 6) {
-      setGameStatus('lost')
     }
+
+    // Save progress to localStorage
+    localStorage.setItem('pokemonGuesserDaily', JSON.stringify({
+      date: dailyDate,
+      targetPokemon: targetPokemon,
+      guesses: newGuesses,
+      gameStatus: newGameStatus
+    }))
   }
 
   const comparePokemon = (guess, target) => {
@@ -85,18 +165,29 @@ function App() {
         onShowHint={() => setShowHint(!showHint)}
         showHint={showHint}
         canShowHint={true}
+        dailyDate={dailyDate}
+        timeUntilReset={timeUntilReset}
+        gameStatus={gameStatus}
       />
       
       {showRules && (
         <div className="rules">
           <h3>How to Play</h3>
-          <p>Guess the Pokemon in 6 tries!</p>
+          <p>Guess today's Pokemon! Take as many tries as you need!</p>
           <ul>
             <li><span className="match">Green</span> = Correct attribute</li>
             <li><span className="partial">Yellow</span> = Partial match (types only)</li>
             <li><span className="no-match">Gray</span> = No match</li>
           </ul>
           <p>Each guess shows which attributes match the target Pokemon.</p>
+          <div className="daily-rules">
+            <h4>📅 Daily Challenge</h4>
+            <p>• Everyone gets the same Pokemon each day</p>
+            <p>• New puzzle resets at midnight UTC</p>
+            <p>• Your progress is saved automatically</p>
+            <p>• Unlimited guesses until you get it right!</p>
+            <p>• Share your results with friends!</p>
+          </div>
         </div>
       )}
 
@@ -121,12 +212,12 @@ function App() {
           </div>
         )}
 
-        {gameStatus !== 'playing' && targetPokemon && (
+        {gameStatus === 'won' && targetPokemon && (
           <GameOver
-            status={gameStatus}
             targetPokemon={targetPokemon}
             guessCount={guesses.length}
-            onNewGame={startNewGame}
+            dailyDate={dailyDate}
+            timeUntilReset={timeUntilReset}
           />
         )}
       </div>

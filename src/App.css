@@ -59,13 +59,22 @@
   font-weight: bold;
 }
 
-.rules .no-match {
-  display: inline-block;
-  background-color: #3a3a3c;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: bold;
+.daily-rules {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #3a3a3c;
+}
+
+.daily-rules h4 {
+  color: #6aaa64;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.daily-rules p {
+  margin: 6px 0;
+  color: #d7dadc;
+  font-size: 0.95rem;
 }
 
 @keyframes slideDown {
