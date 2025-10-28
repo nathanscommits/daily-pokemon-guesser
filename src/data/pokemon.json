@@ -307,7 +307,7 @@
       "Electric"
     ],
     "generation": 1,
-    "evolutionStage": "basic",
+    "evolutionStage": "stage1",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     "description": "It occasionally uses an electric shock to recharge a fellow PIKACHU that is in a weakened state."
@@ -319,7 +319,7 @@
       "Electric"
     ],
     "generation": 1,
-    "evolutionStage": "stage1",
+    "evolutionStage": "stage2",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     "description": "Its tail discharges electricity into the ground, protecting it from getting shocked."
@@ -1182,7 +1182,7 @@
       "Ground"
     ],
     "generation": 1,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
     "description": "It burrows through the ground at a speed of 50 mph while feeding on large boulders."
@@ -1316,7 +1316,7 @@
       "Fighting"
     ],
     "generation": 1,
-    "evolutionStage": "stage2",
+    "evolutionStage": "single",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
     "description": "Its legs can stretch double. First-time foes are startled by its extensible reach."
@@ -1328,7 +1328,7 @@
       "Fighting"
     ],
     "generation": 1,
-    "evolutionStage": "stage2",
+    "evolutionStage": "single",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
     "description": "The arm-twisting punches it throws pulverize even concrete. It rests after three minutes of fighting."
@@ -1340,7 +1340,7 @@
       "Normal"
     ],
     "generation": 1,
-    "evolutionStage": "basic",
+    "evolutionStage": "single",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
     "description": "When it extends its over-six-foot- long tongue, its tail quivers. There is a possibility they are connected."
@@ -1824,7 +1824,7 @@
       "Dragon"
     ],
     "generation": 1,
-    "evolutionStage": "stage1",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
     "description": "It is called the “Mirage Pokémon” because so few have seen it. Its shed skin has been found."
@@ -1849,7 +1849,7 @@
       "Flying"
     ],
     "generation": 1,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
     "description": "It is said to make its home somewhere in the sea. It guides crews of shipwrecks to shore."
@@ -1885,7 +1885,7 @@
       "Grass"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png",
     "description": "It uses the leaf on its head to determine the temperature and humidity. It loves to sunbathe."
@@ -1897,7 +1897,7 @@
       "Grass"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png",
     "description": "The buds that ring its neck give off a spicy aroma that perks people up."
@@ -1909,7 +1909,7 @@
       "Grass"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
     "description": "Its breath has the fantastic ability to revive dead plants and flowers."
@@ -1921,7 +1921,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
     "description": "It has a timid nature. If it is startled, the flames on its back burn more vigorously."
@@ -1933,7 +1933,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
     "description": "It intimidates foes with the heat of its flames. The fire burns more strongly when it readies to fight."
@@ -1945,7 +1945,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
     "description": "It attacks using blasts of fire. It creates heat shimmers with intense fire to hide itself."
@@ -1957,7 +1957,7 @@
       "Water"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png",
     "description": "It has the habit of biting anything with its developed jaws. Even its Trainer needs to be careful."
@@ -1969,7 +1969,7 @@
       "Water"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
     "description": "Once it bites down, it won’t let go until it loses its fangs. New fangs quickly grow into place."
@@ -1981,7 +1981,7 @@
       "Water"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
     "description": "It usually moves slowly, but it goes at blinding speed when it attacks and bites prey."
@@ -1993,7 +1993,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png",
     "description": "It has a very nervous nature. It stands up high on its tail so it can scan wide areas."
@@ -2005,7 +2005,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png",
     "description": "The mother puts its offspring to sleep by curling up around them. It corners foes with speed."
@@ -2018,7 +2018,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png",
     "description": "It marks time precisely. Some countries consider it to be a wise friend, versed in the world’s ways."
@@ -2031,7 +2031,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/164.png",
     "description": "Its eyes are specially developed to enable it to see clearly even in murky darkness and minimal light."
@@ -2044,7 +2044,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png",
     "description": "It is so timid, it can’t move if it isn’t with a swarm of others. It conveys its feelings with scent."
@@ -2057,7 +2057,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png",
     "description": "It uses starlight as energy. When more stars appear at night, the patterns on its back grow larger."
@@ -2070,7 +2070,7 @@
       "Poison"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
     "description": "It sets a trap by spinning a web with thin but strong silk. It waits motionlessly for prey to arrive."
@@ -2083,7 +2083,7 @@
       "Poison"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png",
     "description": "It attaches silk to its prey and sets it free. Later, it tracks the silk to the prey and its friends."
@@ -2096,7 +2096,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png",
     "description": "The transformation of its legs into wings made it better at flying, but more clumsy at walking."
@@ -2109,7 +2109,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
     "description": "It discharges positive and negative electricity from its antenna tips to shock its foes."
@@ -2122,7 +2122,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
     "description": "LANTURN’s light can shine up from great depths. It is nicknamed “The Deep-Sea Star.”"
@@ -2134,7 +2134,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png",
     "description": "The electric sacs in its cheeks are small. If even a little electricity leaks, it becomes shocked."
@@ -2146,7 +2146,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/173.png",
     "description": "It is often seen when shooting stars fill the night skies. It’s said to arrive riding on a shooting star."
@@ -2159,7 +2159,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/174.png",
     "description": "It has a soft and bouncy body. Once it starts bouncing, it becomes impossible to stop."
@@ -2171,7 +2171,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "White",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png",
     "description": "It transforms the kindness and joy of others into happiness, which it stores in its shell."
@@ -2184,7 +2184,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "White",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png",
     "description": "To share its happiness, it flies around the world seeking kind­ hearted people."
@@ -2197,7 +2197,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png",
     "description": "It picks food from cactus plants, deftly avoiding buds and spines. It seems to skip about to move."
@@ -2210,7 +2210,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
     "description": "This odd Pokémon can see both the past and the future. It eyes the sun’s movement all day."
@@ -2222,7 +2222,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "White",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
     "description": "Its fluffy coat swells to double when static electricity builds up. Touching it can be shocking."
@@ -2234,7 +2234,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png",
     "description": "If its coat becomes fully charged with electricity, its tail lights up. It fires hair that zaps on impact."
@@ -2246,7 +2246,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
     "description": "The tip of its tail shines brightly. In the olden days, people sent signals using the tail’s light."
@@ -2258,7 +2258,7 @@
       "Grass"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
     "description": "When the heavy rainfall season ends, it is drawn out by warm sunlight to dance in the open."
@@ -2271,7 +2271,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/183.png",
     "description": "The oil-filled end of its tail floats on water. It keeps MARILL from drowning even in a strong current."
@@ -2284,7 +2284,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png",
     "description": "It can spend all day in water, since it can inhale and store a large volume of air."
@@ -2296,7 +2296,7 @@
       "Rock"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/185.png",
     "description": "To avoid being attacked, it does nothing but mimic a tree. It hates water and flees from rain."
@@ -2308,7 +2308,7 @@
       "Water"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png",
     "description": "It gathers groups of others as their leader. Its cries make POLIWAG obey."
@@ -2321,7 +2321,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/187.png",
     "description": "It drifts on winds. It is said that when HOPPIP gather in fields and mountains, spring is on the way."
@@ -2334,7 +2334,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png",
     "description": "It blooms when the weather warms. It floats in the sky to soak up as much sunlight as possible."
@@ -2347,7 +2347,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png",
     "description": "Blown by seasonal winds, it circles the globe, scattering cotton spores as it goes."
@@ -2359,7 +2359,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png",
     "description": "It lives high among the treetops. It can use its tail as freely and cleverly as its hands."
@@ -2371,7 +2371,7 @@
       "Grass"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/191.png",
     "description": "It suddenly falls out of the sky in the morning. A year after a cold summer, their population explodes."
@@ -2383,7 +2383,7 @@
       "Grass"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png",
     "description": "It gets energy from warm sunlight and is known for its habit of moving in pursuit of it."
@@ -2396,7 +2396,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/193.png",
     "description": "It can hover in one spot by flapping its wings at high speed. It flits about to guard its territory."
@@ -2409,7 +2409,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
     "description": "When walking on land, it covers its body with a poisonous film that keeps its skin from dehydrating."
@@ -2422,7 +2422,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
     "description": "It has an easygoing nature. It doesn’t care if it bumps its head on boats and boulders while swimming."
@@ -2434,7 +2434,7 @@
       "Psychic"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
     "description": "Its fur is so sensitive, it can sense minute shifts in the air and predict the weather."
@@ -2446,7 +2446,7 @@
       "Dark"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Black",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
     "description": "When exposed to the moon’s aura, the rings on its body glow faintly and it gains a mysterious power."
@@ -2459,7 +2459,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Black",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/198.png",
     "description": "If spotted, it will lure an unwary person into chasing it, then lose the pursuer on mountain trails."
@@ -2472,7 +2472,7 @@
       "Psychic"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
     "description": "Being bitten by SHELLDER gave it intelligence comparable to that of award-winning scientists."
@@ -2484,7 +2484,7 @@
       "Ghost"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
     "description": "A Pokémon that startles people in the middle of the night. It gathers fear as its energy."
@@ -2508,7 +2508,7 @@
       "Psychic"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png",
     "description": "It desperately tries to keep its black tail hidden. It is said to be proof the tail hides a secret."
@@ -2521,7 +2521,7 @@
       "Psychic"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/203.png",
     "description": "The head on its tail contains a small brain. It can instinctively fight even while facing backward."
@@ -2533,7 +2533,7 @@
       "Bug"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png",
     "description": "It looks just like a pinecone. Its shell protects it from bird Pokémon that peck it by mistake."
@@ -2546,7 +2546,7 @@
       "Steel"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png",
     "description": "It is encased in a steel shell. Its peering eyes are all that can be seen of its mysterious innards."
@@ -2558,7 +2558,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png",
     "description": "It digs into the ground with its tail and makes a mazelike nest. It can fly just a little."
@@ -2571,7 +2571,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/207.png",
     "description": "It glides as if sliding. It startles foes by clamping on to their faces, then jabs with its poison stinger."
@@ -2584,7 +2584,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
     "description": "It is thought its body transformed as a result of iron accumulating internally from swallowing soil."
@@ -2596,7 +2596,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png",
     "description": "Small Pokémon flee from its scary face. It is, however, considered by women to be cute."
@@ -2608,7 +2608,7 @@
       "Fairy"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png",
     "description": "It is timid in spite of its looks. If it becomes enraged, however, it will strike with its huge fangs."
@@ -2621,7 +2621,7 @@
       "Poison"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png",
     "description": "It shoots the poison spines on its body in all directions. Its round form makes it a poor swimmer."
@@ -2634,7 +2634,7 @@
       "Steel"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png",
     "description": "It raises its pincers with eyelike markings for intimidation. It also swings them down dangerously."
@@ -2647,7 +2647,7 @@
       "Rock"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
     "description": "It stores berries in its shell. The berries eventually ferment to become delicious juices."
@@ -2660,7 +2660,7 @@
       "Fighting"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png",
     "description": "It loves sweet honey. To keep all the honey to itself, it hurls rivals away with its prized horn."
@@ -2673,7 +2673,7 @@
       "Ice"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Black",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/215.png",
     "description": "A smart and sneaky Pokémon. A pair may work together to steal eggs by having one lure the parents away."
@@ -2685,7 +2685,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/216.png",
     "description": "It lets honey soak into its paws so it can lick them all the time. Every set of paws tastes unique."
@@ -2697,7 +2697,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png",
     "description": "In its territory, it leaves scratches on trees that bear delicious berries or fruits."
@@ -2709,7 +2709,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png",
     "description": "Its body is made of magma. If it doesn’t keep moving, its body will cool and harden."
@@ -2722,7 +2722,7 @@
       "Rock"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/219.png",
     "description": "Its body temperature is roughly 18,000 degrees F. Flames spout from gaps in its hardened shell."
@@ -2735,7 +2735,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/220.png",
     "description": "It has a very sensitive nose. It can locate mushrooms, berries, and even hot springs buried under ice."
@@ -2748,7 +2748,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/221.png",
     "description": "Covered by a shaggy coat, it is strong against the cold. Its tusks of ice thicken when it snows."
@@ -2761,7 +2761,7 @@
       "Rock"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/222.png",
     "description": "Many live in the clean seas of the south. They apparently can’t live in polluted waters."
@@ -2773,7 +2773,7 @@
       "Water"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/223.png",
     "description": "It forcefully squirts water. The water jet never misses prey even if the REMORAID is deep in the sea."
@@ -2785,7 +2785,7 @@
       "Water"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/224.png",
     "description": "It loves to lurk inside holes in rocks. It sometimes sprays ink on prey by sticking out only its mouth."
@@ -2798,7 +2798,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/225.png",
     "description": "It carries food rolled up in its tail. It has the habit of sharing food with people lost in mountains."
@@ -2811,7 +2811,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/226.png",
     "description": "While elegantly swimming in the sea, it ignores REMORAID that cling to its fins seeking food scraps."
@@ -2824,7 +2824,7 @@
       "Flying"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
     "description": "Despite being clad entirely in iron-hard armor, it flies at speeds over 180 mph."
@@ -2837,7 +2837,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Black",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/228.png",
     "description": "It is smart enough to hunt in packs. It uses a variety of cries for communicating with others."
@@ -2850,7 +2850,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Black",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
     "description": "The flames it breathes when angry contain toxins. If they cause a burn, it will hurt forever."
@@ -2863,7 +2863,7 @@
       "Dragon"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
     "description": "It lives in caves on the seafloor and creates giant whirlpools every time it moves."
@@ -2875,7 +2875,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Blue",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/231.png",
     "description": "It is strong despite its compact size. It can easily pick up and carry an adult human on its back."
@@ -2887,7 +2887,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png",
     "description": "It attacks by curling up, then rolling into its foe. It can blow apart a house in one hit."
@@ -2899,7 +2899,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
     "description": "It was upgraded to enable the exploration of other planets. However, it failed to measure up."
@@ -2911,7 +2911,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/234.png",
     "description": "Staring at its antlers creates an odd sensation as if one were being drawn into their centers."
@@ -2923,7 +2923,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "White",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/235.png",
     "description": "It marks its territory by using its tail like a paintbrush. There are more than 5,000 different marks."
@@ -2935,7 +2935,7 @@
       "Fighting"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Purple",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/236.png",
     "description": "It is famous for its eagerness to fight and always nurses injuries from challenging larger foes."
@@ -2947,7 +2947,7 @@
       "Fighting"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Brown",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/237.png",
     "description": "It fights while spinning like a top. The centrifugal force boosts its destructive power by ten."
@@ -2960,7 +2960,7 @@
       "Psychic"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/238.png",
     "description": "It tests everything by touching with its lips, which remember what it likes and dislikes."
@@ -2972,7 +2972,7 @@
       "Electric"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Yellow",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png",
     "description": "A weak electric current flows between its horns. Sticking a hand there shocks the unwary."
@@ -2984,7 +2984,7 @@
       "Fire"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Red",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png",
     "description": "Its magma-like blood circulates throughout its body. Its body’s heat can top 1,100 degrees F."
@@ -3008,7 +3008,7 @@
       "Normal"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Pink",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
     "description": "The eggs it lays are filled with happiness. Eating even one bite will bring a smile to anyone."
@@ -3057,7 +3057,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "basic",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
     "description": "A Pokémon that eats soil. Once it has eaten a large mountain, it goes to sleep so it can grow."
@@ -3070,7 +3070,7 @@
       "Ground"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage1",
     "color": "Gray",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png",
     "description": "Its body is as hard as bedrock. By venting pressurized gas, it can launch itself like a rocket."
@@ -3083,7 +3083,7 @@
       "Dark"
     ],
     "generation": 2,
-    "evolutionStage": "single",
+    "evolutionStage": "stage2",
     "color": "Green",
     "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
     "description": "If it rampages, it knocks down mountains and buries rivers. Maps must be redrawn afterward."
