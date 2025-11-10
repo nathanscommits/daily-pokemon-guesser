@@ -4,14 +4,13 @@ A Wordle-style guessing game where you try to guess a random Pokémon! Each gues
 
 ## Features
 
-- 🎮 **Wordle-style gameplay** - Guess the Pokémon in 6 tries
+- 🎮 **Daily Wordle-style gameplay** - One shared, random Pokémon each day
 - 🎨 **Visual feedback** - Color-coded hints for each attribute:
   - 🟢 Green = Exact match
   - 🟡 Yellow = Partial match (for types)
   - ⚫ Gray = No match
 - 🔍 **Autocomplete search** - Type-ahead Pokemon selection to prevent typos
 - 📱 **Responsive design** - Works on mobile and desktop
-- 🎲 **Random Pokemon** - Each game features a new random Pokémon
 - 🖼️ **Pokemon Sprites** - Official sprites displayed throughout the game
 - 📊 **All Pokemon** - Complete roster of all 1010 Pokemon from all 9 generations
 - 📖 **Pokedex Descriptions** - Official Pokedex entries revealed when you guess correctly or lose
@@ -32,7 +31,7 @@ Each guess compares these attributes with the target Pokémon:
 3. See which attributes match the target Pokémon
 4. Use the clues to make your next guess
 5. Click "📖 Show Hint" anytime to see the Pokedex description for extra help
-6. Guess correctly within 6 tries to win!
+6. Keep guessing—there’s no limit—until you identify the Pokémon!
 7. Read the Pokedex description when the game ends to learn more about the Pokemon!
 
 ## Installation & Setup
@@ -64,7 +63,6 @@ npm run build
 
 ## Future Enhancements
 
-- Add daily challenge mode (same Pokémon for everyone each day)
 - Track statistics and winning streaks
 - Add hints system
 - Compare abilities or signature moves
