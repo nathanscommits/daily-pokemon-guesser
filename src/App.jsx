@@ -6,6 +6,45 @@ import GuessList from './components/GuessList'
 import GameOver from './components/GameOver'
 import './App.css'
 
+const cyrb128 = (str) => {
+  let h1 = 1779033703
+  let h2 = 3144134277
+  let h3 = 1013904242
+  let h4 = 2773480762
+
+  for (let i = 0, k; i < str.length; i += 1) {
+    k = str.charCodeAt(i)
+    h1 = Math.imul(h1 ^ k, 597399067)
+    h2 = Math.imul(h2 ^ k, 2869860233)
+    h3 = Math.imul(h3 ^ k, 951274213)
+    h4 = Math.imul(h4 ^ k, 2716044179)
+  }
+
+  h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067)
+  h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233)
+  h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213)
+  h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179)
+
+  return [(h1 ^ h2 ^ h3 ^ h4) >>> 0, h2 >>> 0, h3 >>> 0, h4 >>> 0]
+}
+
+const sfc32 = (a, b, c, d) => {
+  return () => {
+    a >>>= 0
+    b >>>= 0
+    c >>>= 0
+    d >>>= 0
+    let t = (a + b) | 0
+    a = b ^ (b >>> 9)
+    b = (c + (c << 3)) | 0
+    c = (c << 21) | (c >>> 11)
+    d = (d + 1) | 0
+    t = (t + d) | 0
+    c = (c + t) | 0
+    return (t >>> 0) / 4294967296
+  }
+}
+
 function App() {
   const [targetPokemon, setTargetPokemon] = useState(null)
   const [guesses, setGuesses] = useState([])
@@ -19,11 +58,11 @@ function App() {
   const getDailyPokemon = () => {
     const today = new Date()
     const dateString = today.toISOString().split('T')[0] // YYYY-MM-DD format
-    
-    // Use date as seed for consistent daily Pokemon
-    const seed = dateString.split('-').join('')
-    const pokemonIndex = parseInt(seed) % pokemonData.length
-    
+
+    const [a, b, c, d] = cyrb128(`${dateString}-pokemon-guesser`)
+    const random = sfc32(a, b, c, d)
+    const pokemonIndex = Math.floor(random() * pokemonData.length)
+
     return {
       pokemon: pokemonData[pokemonIndex],
       date: dateString
@@ -36,33 +75,33 @@ function App() {
     const tomorrow = new Date(now)
     tomorrow.setUTCDate(tomorrow.getUTCDate() + 1)
     tomorrow.setUTCHours(0, 0, 0, 0)
-    
+
     const diff = tomorrow.getTime() - now.getTime()
     const hours = Math.floor(diff / (1000 * 60 * 60))
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-    
+
     return { hours, minutes }
   }
 
   // Initialize daily game
   useEffect(() => {
     initializeDailyGame()
-    
+
     // Update timer every minute
     const timer = setInterval(() => {
       setTimeUntilReset(getTimeUntilReset())
     }, 60000)
-    
+
     return () => clearInterval(timer)
   }, [])
 
   const initializeDailyGame = () => {
     const dailyData = getDailyPokemon()
     const savedData = localStorage.getItem('pokemonGuesserDaily')
-    
+
     if (savedData) {
       const parsed = JSON.parse(savedData)
-      
+
       // Check if it's a new day
       if (parsed.date === dailyData.date) {
         // Same day - restore saved progress
@@ -78,7 +117,7 @@ function App() {
       // First time - start fresh
       startNewDailyGame(dailyData)
     }
-    
+
     setTimeUntilReset(getTimeUntilReset())
   }
 
@@ -88,7 +127,7 @@ function App() {
     setGameStatus('playing')
     setShowHint(false)
     setDailyDate(dailyData.date)
-    
+
     // Save to localStorage
     localStorage.setItem('pokemonGuesserDaily', JSON.stringify({
       date: dailyData.date,
@@ -107,7 +146,7 @@ function App() {
     const comparison = comparePokemon(pokemon, targetPokemon)
     const newGuess = { pokemon, comparison }
     const newGuesses = [...guesses, newGuess]
-    
+
     setGuesses(newGuesses)
 
     let newGameStatus = gameStatus
@@ -138,7 +177,7 @@ function App() {
 
   const compareTypes = (guessTypes, targetTypes) => {
     const matchCount = guessTypes.filter(type => targetTypes.includes(type)).length
-    
+
     if (matchCount === guessTypes.length && guessTypes.length === targetTypes.length) {
       return 'match' // All types match
     } else if (matchCount > 0) {
@@ -150,17 +189,17 @@ function App() {
 
   const removePokemonNameFromDescription = (description, pokemonName) => {
     if (!description || !pokemonName) return description;
-    
+
     // Create a regex that matches the Pokemon name regardless of case
     const nameRegex = new RegExp(`\\b${pokemonName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
-    
+
     // Replace the Pokemon name with "[This Pokemon]" or similar
     return description.replace(nameRegex, '[This Pokemon]');
   }
 
   return (
     <div className="app">
-      <Header 
+      <Header
         onShowRules={() => setShowRules(!showRules)}
         onShowHint={() => setShowHint(!showHint)}
         showHint={showHint}
@@ -169,7 +208,7 @@ function App() {
         timeUntilReset={timeUntilReset}
         gameStatus={gameStatus}
       />
-      
+
       {showRules && (
         <div className="rules">
           <h3>How to Play</h3>
@@ -193,7 +232,7 @@ function App() {
 
       <div className="game-container">
         {gameStatus === 'playing' && targetPokemon && (
-          <GuessInput 
+          <GuessInput
             onGuess={handleGuess}
             pokemonList={pokemonData}
             guessedIds={guesses.map(g => g.pokemon.id)}
