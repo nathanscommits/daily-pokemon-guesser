@@ -1,17 +1,6 @@
 import './GameOver.css'
 
-function GameOver({ targetPokemon, guessCount, dailyDate, timeUntilReset }) {
-  const formatDate = (dateString) => {
-    if (!dateString) return ''
-    const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', { 
-      weekday: 'long', 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    })
-  }
-
+function GameOver({ targetPokemon, guessCount }) {
   return (
     <div className="game-over-overlay">
       <div className="game-over-modal">
@@ -38,15 +27,8 @@ function GameOver({ targetPokemon, guessCount, dailyDate, timeUntilReset }) {
         )}
         
         <div className="daily-challenge-info">
-          <h3>📅 Daily Challenge Complete!</h3>
-          <p>Today's puzzle: <strong>{formatDate(dailyDate)}</strong></p>
-          {timeUntilReset && (
-            <p className="next-puzzle">
-              Next puzzle in {timeUntilReset.hours}h {timeUntilReset.minutes}m
-            </p>
-          )}
           <p className="share-message">
-            Share your result with friends! Everyone gets the same Pokemon each day.
+            Refresh the page to play again with a new random Pokemon!
           </p>
         </div>
       </div>

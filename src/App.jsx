@@ -6,139 +6,23 @@ import GuessList from './components/GuessList'
 import GameOver from './components/GameOver'
 import './App.css'
 
-const cyrb128 = (str) => {
-  let h1 = 1779033703
-  let h2 = 3144134277
-  let h3 = 1013904242
-  let h4 = 2773480762
-
-  for (let i = 0, k; i < str.length; i += 1) {
-    k = str.charCodeAt(i)
-    h1 = Math.imul(h1 ^ k, 597399067)
-    h2 = Math.imul(h2 ^ k, 2869860233)
-    h3 = Math.imul(h3 ^ k, 951274213)
-    h4 = Math.imul(h4 ^ k, 2716044179)
-  }
-
-  h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067)
-  h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233)
-  h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213)
-  h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179)
-
-  return [(h1 ^ h2 ^ h3 ^ h4) >>> 0, h2 >>> 0, h3 >>> 0, h4 >>> 0]
-}
-
-const sfc32 = (a, b, c, d) => {
-  return () => {
-    a >>>= 0
-    b >>>= 0
-    c >>>= 0
-    d >>>= 0
-    let t = (a + b) | 0
-    a = b ^ (b >>> 9)
-    b = (c + (c << 3)) | 0
-    c = (c << 21) | (c >>> 11)
-    d = (d + 1) | 0
-    t = (t + d) | 0
-    c = (c + t) | 0
-    return (t >>> 0) / 4294967296
-  }
-}
-
 function App() {
   const [targetPokemon, setTargetPokemon] = useState(null)
   const [guesses, setGuesses] = useState([])
-  const [gameStatus, setGameStatus] = useState('playing') // 'playing', 'won', 'lost'
+  const [gameStatus, setGameStatus] = useState('playing')
   const [showRules, setShowRules] = useState(false)
   const [showHint, setShowHint] = useState(false)
-  const [dailyDate, setDailyDate] = useState(null)
-  const [timeUntilReset, setTimeUntilReset] = useState(null)
 
-  // Get daily Pokemon based on date
-  const getDailyPokemon = () => {
-    const today = new Date()
-    const dateString = today.toISOString().split('T')[0] // YYYY-MM-DD format
-
-    const [a, b, c, d] = cyrb128(`${dateString}-pokemon-guesser`)
-    const random = sfc32(a, b, c, d)
-    const pokemonIndex = Math.floor(random() * pokemonData.length)
-
-    return {
-      pokemon: pokemonData[pokemonIndex],
-      date: dateString
-    }
-  }
-
-  // Calculate time until next reset (midnight UTC)
-  const getTimeUntilReset = () => {
-    const now = new Date()
-    const tomorrow = new Date(now)
-    tomorrow.setUTCDate(tomorrow.getUTCDate() + 1)
-    tomorrow.setUTCHours(0, 0, 0, 0)
-
-    const diff = tomorrow.getTime() - now.getTime()
-    const hours = Math.floor(diff / (1000 * 60 * 60))
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-
-    return { hours, minutes }
-  }
-
-  // Initialize daily game
+  // Pick a random Pokemon on each page load (fresh game on refresh)
   useEffect(() => {
-    initializeDailyGame()
-
-    // Update timer every minute
-    const timer = setInterval(() => {
-      setTimeUntilReset(getTimeUntilReset())
-    }, 60000)
-
-    return () => clearInterval(timer)
-  }, [])
-
-  const initializeDailyGame = () => {
-    const dailyData = getDailyPokemon()
-    const savedData = localStorage.getItem('pokemonGuesserDaily')
-
-    if (savedData) {
-      const parsed = JSON.parse(savedData)
-
-      // Check if it's a new day
-      if (parsed.date === dailyData.date) {
-        // Same day - restore saved progress
-        setTargetPokemon(parsed.targetPokemon)
-        setGuesses(parsed.guesses || [])
-        setGameStatus(parsed.gameStatus || 'playing')
-        setDailyDate(parsed.date)
-      } else {
-        // New day - start fresh
-        startNewDailyGame(dailyData)
-      }
-    } else {
-      // First time - start fresh
-      startNewDailyGame(dailyData)
-    }
-
-    setTimeUntilReset(getTimeUntilReset())
-  }
-
-  const startNewDailyGame = (dailyData) => {
-    setTargetPokemon(dailyData.pokemon)
+    const pokemonIndex = Math.floor(Math.random() * pokemonData.length)
+    setTargetPokemon(pokemonData[pokemonIndex])
     setGuesses([])
     setGameStatus('playing')
     setShowHint(false)
-    setDailyDate(dailyData.date)
-
-    // Save to localStorage
-    localStorage.setItem('pokemonGuesserDaily', JSON.stringify({
-      date: dailyData.date,
-      targetPokemon: dailyData.pokemon,
-      guesses: [],
-      gameStatus: 'playing'
-    }))
-  }
+  }, [])
 
   const handleGuess = (pokemon) => {
-    // Check if already guessed
     if (guesses.some(g => g.pokemon.id === pokemon.id)) {
       return
     }
@@ -149,20 +33,9 @@ function App() {
 
     setGuesses(newGuesses)
 
-    let newGameStatus = gameStatus
-    // Check if won
     if (pokemon.id === targetPokemon.id) {
-      newGameStatus = 'won'
       setGameStatus('won')
     }
-
-    // Save progress to localStorage
-    localStorage.setItem('pokemonGuesserDaily', JSON.stringify({
-      date: dailyDate,
-      targetPokemon: targetPokemon,
-      guesses: newGuesses,
-      gameStatus: newGameStatus
-    }))
   }
 
   const comparePokemon = (guess, target) => {
@@ -187,14 +60,29 @@ function App() {
     }
   }
 
-  const removePokemonNameFromDescription = (description, pokemonName) => {
-    if (!description || !pokemonName) return description;
+  const removePokemonNamesFromDescription = (description, targetPokemonName) => {
+    if (!description) return description;
 
-    // Create a regex that matches the Pokemon name regardless of case
-    const nameRegex = new RegExp(`\\b${pokemonName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+    let result = description;
 
-    // Replace the Pokemon name with "[This Pokemon]" or similar
-    return description.replace(nameRegex, '[This Pokemon]');
+    // Get all Pokemon names and sort by length (longest first) to avoid partial replacements
+    const allPokemonNames = pokemonData
+      .map(p => p.name)
+      .sort((a, b) => b.length - a.length);
+
+    // Replace each Pokemon name with appropriate placeholder
+    allPokemonNames.forEach(name => {
+      const nameRegex = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+      
+      // Use different placeholder for target vs other Pokemon
+      if (name.toLowerCase() === targetPokemonName?.toLowerCase()) {
+        result = result.replace(nameRegex, '[This Pokemon]');
+      } else {
+        result = result.replace(nameRegex, '[Pokemon]');
+      }
+    });
+
+    return result;
   }
 
   return (
@@ -204,15 +92,13 @@ function App() {
         onShowHint={() => setShowHint(!showHint)}
         showHint={showHint}
         canShowHint={true}
-        dailyDate={dailyDate}
-        timeUntilReset={timeUntilReset}
         gameStatus={gameStatus}
       />
 
       {showRules && (
         <div className="rules">
           <h3>How to Play</h3>
-          <p>Guess today's Pokemon! Take as many tries as you need!</p>
+          <p>Guess the Pokemon! Take as many tries as you need!</p>
           <ul>
             <li><span className="match">Green</span> = Correct attribute</li>
             <li><span className="partial">Yellow</span> = Partial match (types only)</li>
@@ -220,12 +106,9 @@ function App() {
           </ul>
           <p>Each guess shows which attributes match the target Pokemon.</p>
           <div className="daily-rules">
-            <h4>📅 Daily Challenge</h4>
-            <p>• Everyone gets the same Pokemon each day</p>
-            <p>• New puzzle resets at midnight UTC</p>
-            <p>• Your progress is saved automatically</p>
+            <h4>🔄 New game on refresh</h4>
+            <p>• A new random Pokemon is chosen each time you refresh the page</p>
             <p>• Unlimited guesses until you get it right!</p>
-            <p>• Share your results with friends!</p>
           </div>
         </div>
       )}
@@ -244,7 +127,7 @@ function App() {
         {showHint && targetPokemon && gameStatus === 'playing' && (
           <div className="hint-section">
             <h3>📖 Pokedex Hint</h3>
-            <p className="hint-description">"{removePokemonNameFromDescription(targetPokemon.description, targetPokemon.name)}"</p>
+            <p className="hint-description">"{removePokemonNamesFromDescription(targetPokemon.description, targetPokemon.name)}"</p>
             <button className="hide-hint-button" onClick={() => setShowHint(false)}>
               Hide Hint
             </button>
@@ -255,8 +138,6 @@ function App() {
           <GameOver
             targetPokemon={targetPokemon}
             guessCount={guesses.length}
-            dailyDate={dailyDate}
-            timeUntilReset={timeUntilReset}
           />
         )}
       </div>
