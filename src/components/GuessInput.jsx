@@ -53,7 +53,7 @@ function GuessInput({ onGuess, pokemonList, guessedIds }) {
                 <div className="pokemon-details">
                   <span className="pokemon-name">{pokemon.name}</span>
                   <span className="pokemon-info">
-                    {pokemon.types.join(' / ')} • Gen {pokemon.generation}
+                    {pokemon.types.join(' / ')} • Gen {pokemon.generation} • {pokemon.color} • {pokemon.evolutionStage === 'basic' ? 'Basic' : pokemon.evolutionStage === 'stage1' ? 'Stage 1' : 'Stage 2'}
                   </span>
                 </div>
               </div>
