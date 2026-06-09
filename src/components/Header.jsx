@@ -1,12 +1,20 @@
 import './Header.css'
 
-function Header({ onShowRules, onShowHint, showHint, canShowHint, gameStatus }) {
+function Header({ onShowRules, onShowHint, onShowBrowser, showHint, showBrowser, canShowHint, gameStatus }) {
   return (
     <header className="header">
       <div className="header-top">
         <h1 className="title">Pokémon Guesser</h1>
       </div>
       <div className="header-buttons">
+        {gameStatus === 'playing' && (
+          <button
+            className={`browse-button ${showBrowser ? 'active' : ''}`}
+            onClick={onShowBrowser}
+          >
+            {showBrowser ? '🔍 Hide Browse' : '🔍 Browse'}
+          </button>
+        )}
         {canShowHint && gameStatus === 'playing' && (
           <button 
             className={`hint-button ${showHint ? 'active' : ''}`} 

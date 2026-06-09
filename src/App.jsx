@@ -4,6 +4,7 @@ import Header from './components/Header'
 import GuessInput from './components/GuessInput'
 import GuessList from './components/GuessList'
 import GameOver from './components/GameOver'
+import PokemonBrowser from './components/PokemonBrowser'
 import './App.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   const [gameStatus, setGameStatus] = useState('playing')
   const [showRules, setShowRules] = useState(false)
   const [showHint, setShowHint] = useState(false)
+  const [showBrowser, setShowBrowser] = useState(false)
 
   // Pick a random Pokemon on each page load (fresh game on refresh)
   useEffect(() => {
@@ -90,7 +92,9 @@ function App() {
       <Header
         onShowRules={() => setShowRules(!showRules)}
         onShowHint={() => setShowHint(!showHint)}
+        onShowBrowser={() => setShowBrowser(!showBrowser)}
         showHint={showHint}
+        showBrowser={showBrowser}
         canShowHint={true}
         gameStatus={gameStatus}
       />
@@ -119,6 +123,17 @@ function App() {
             onGuess={handleGuess}
             pokemonList={pokemonData}
             guessedIds={guesses.map(g => g.pokemon.id)}
+          />
+        )}
+
+        {gameStatus === 'playing' && (
+          <PokemonBrowser
+            isOpen={showBrowser}
+            pokemonList={pokemonData}
+            guesses={guesses}
+            guessedIds={guesses.map(g => g.pokemon.id)}
+            onGuess={handleGuess}
+            onClose={() => setShowBrowser(false)}
           />
         )}
 

@@ -56,6 +56,26 @@
   background-color: #6aaa64;
 }
 
+.browse-button {
+  background-color: #3a6ea5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.browse-button:hover {
+  background-color: #4a7eb5;
+}
+
+.browse-button.active {
+  background-color: #5a8ec5;
+  box-shadow: 0 0 0 2px rgba(58, 110, 165, 0.3);
+}
+
 .hint-button {
   background-color: #b59f3b;
   color: white;
